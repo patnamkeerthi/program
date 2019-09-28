@@ -17,13 +17,13 @@ void replace(string s,int k){
 
         if(val + k > 122){ 
 
-            k -= (122-val); 
+            k =k- (122-val); 
             k = k % 26; 
-            S += char(96 + k); 
+            S =S+ char(96 + k); 
         } 
         else
 
-            S += char(val + k); 
+            S =S+ char(val + k); 
 
         k = dup; 
     } 

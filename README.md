@@ -5,12 +5,11 @@
 
 using namespace std; 
 
-void encode(string s,int k){ 
+void replace(string s,int k){ 
 
-    string newS; 
+    string S; 
     for(int i=0; i<s.length(); ++i) 
-    { 
-        int encode;
+    {
 
         int val = int(s[i]); 
 
@@ -20,16 +19,16 @@ void encode(string s,int k){
 
             k -= (122-val); 
             k = k % 26; 
-            newS += char(96 + k); 
+            S += char(96 + k); 
         } 
         else
 
-            newS += char(val + k); 
+            S += char(val + k); 
 
         k = dup; 
     } 
 
-    cout<<newS; 
+    cout<<S; 
 } 
 
 int main(){
@@ -44,7 +43,7 @@ int main(){
 
 cin>>k;
 
-encode(str, k);
+replace(str, k);
 
     return 0; 
 } 

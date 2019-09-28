@@ -18,7 +18,6 @@ void replace(string s,int k){
         if(val + k > 122){ 
 
             k =k- (122-val); 
-            k = k % 26; 
             S =S+ char(96 + k); 
         } 
         else
